@@ -1,44 +1,76 @@
 body {
-  background-color: antiquewhite;
+  margin: 30px;
 }
-h1 {
-  font-size: 50px;
-}
-header {
+.main {
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
+  gap: 40px;
 }
-nav ul {
+.left {
   display: flex;
-  list-style: none;
-  gap: 20px;
-  font-size: 20px;
+  gap: 40px;
 }
-p {
-  text-align: center;
+.box {
+  max-width: 300px;
+  min-width: 100px;
+  margin-bottom: 20px;
 }
-@media screen and (max-width: 900px) {
-  header {
+.box img {
+  width: 100%;
+  border-radius: 20px;
+  height: 300px;
+  object-fit: cover;
+}
+.body {
+  display: flex;
+}
+.card {
+  width: 95%;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.card img {
+  max-width: 250px;
+  min-width: 100px;
+
+  border-radius: 20px;
+}
+.foot {
+  width: 30%;
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .main {
     display: block;
   }
-  nav ul {
-    padding-left: 10px;
-    gap: 10px;
+
+  .body {
+    display: block;
+    width: 90%;
   }
-  h1 {
-    font-size: 36px;
-    padding-left: 30px;
-  }
-  body {
-    background-color: aliceblue;
+  .foot {
+    width: 90%;
   }
 }
-@media screen and (max-width: 500px) {
-  nav ul {
+@media screen and (max-width: 768px) and (min-width: 340px) {
+  .main {
     display: block;
-    padding-left: 30px;
   }
-  body {
-    background-color: aqua;
+  .left {
+    display: block;
+  }
+  .card {
+    font-size: 10px;
+    width: 100%;
+  }
+  .body {
+    display: block;
+  }
+  .foot {
+    width: 90%;
   }
 }
