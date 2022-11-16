@@ -1,0 +1,40 @@
+.color-aqua {
+  width: 20%;
+  height: 100px;
+  background-color: aqua;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+.color-aqua:hover {
+  width: 100%;
+}
+.color-green {
+  width: 20%;
+  height: 100px;
+  background-color: green;
+  transition: 1s;
+}
+.color-green:active {
+  width: 100%;
+  transition: 0.5s;
+}
+.move {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+.move-blue {
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.move-green {
+  background-color: green;
+  padding: 40px;
+  border-radius: 50%;
+}
+.move-red {
+  background-color: red;
+  padding: 40px;
+  border-radius: 50%;
+}
