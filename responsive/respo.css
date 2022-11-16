@@ -1,76 +1,174 @@
-body {
-  margin: 30px;
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
+.logo {
+  display: flex;
+}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  box-shadow: 2px 2px #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+}
+.header a {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
 .main {
   box-sizing: border-box;
   display: flex;
-  gap: 40px;
+  gap: 50px;
+  margin-bottom: 50px;
 }
-.left {
-  display: flex;
-  gap: 40px;
-}
-.box {
-  max-width: 300px;
-  min-width: 100px;
-  margin-bottom: 20px;
-}
-.box img {
-  width: 100%;
-  border-radius: 20px;
-  height: 300px;
-  object-fit: cover;
-}
-.body {
-  display: flex;
+.button {
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
 }
 .card {
-  width: 95%;
-  display: flex;
-  gap: 50px;
-  margin-bottom: 20px;
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 10px;
 }
 .card img {
   max-width: 250px;
-  min-width: 100px;
-
+  min-width: 150px;
   border-radius: 20px;
 }
-.foot {
-  width: 30%;
+.card-right {
   background-color: #ccc;
-  padding: 5px;
+  padding: 30px;
   border-radius: 10px;
 }
+.text a {
+  color: black;
+  font-size: 28px;
+}
+.text a:hover {
+  color: rgb(18, 125, 125);
+}
 
+.right-top {
+  display: flex;
+  gap: 20px;
+}
+.section div {
+  display: flex;
+  gap: 20px;
+}
+h1 {
+  color: rgb(157, 101, 11);
+}
+h3 {
+  font-size: 25px;
+}
+.section p {
+  width: 200px;
+  font-size: 15px;
+  color: rgb(4, 52, 36);
+}
+.second-section img {
+  max-width: 60%;
+  border-radius: 20px;
+  float: left;
+  margin: 20px;
+}
+.bottom {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.bottom .input {
+  width: 100%;
+  min-width: 100px;
+  height: 50px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccc;
+  padding: 40px;
+  margin-top: 20px;
+}
 @media screen and (max-width: 1024px) and (min-width: 768px) {
+  .card {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
   .main {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
   }
-
-  .body {
-    display: block;
-    width: 90%;
+  .second-section img {
+    float: none;
+    max-width: 100%;
   }
-  .foot {
-    width: 90%;
+  .text {
+    display: flex;
+    gap: 50px;
+    margin-top: 100px;
   }
 }
-@media screen and (max-width: 768px) and (min-width: 340px) {
+@media screen and (max-width: 767px) and (min-width: 340px) {
+  .logo {
+    width: 60%;
+    padding-left: 40px;
+  }
+
   .main {
     display: block;
   }
-  .left {
-    display: block;
+  .button {
+    width: 20%;
   }
-  .card {
-    font-size: 10px;
+  .header {
+    flex-wrap: wrap;
+  }
+  .header-right {
     width: 100%;
+    order: 1;
   }
-  .body {
+  .card-right {
+    margin-top: 100px;
+  }
+  .right-top {
     display: block;
   }
-  .foot {
-    width: 90%;
+  .second-section img {
+    float: none;
+    max-width: 100%;
   }
 }

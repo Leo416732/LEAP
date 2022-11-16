@@ -1,66 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="respo.css" />
+    <title>cite</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="respo.css" />
-  <title>cite</title>
-</head>
-
-<body>
-  <h1>IMAGES</h1>
-  <div class="main">
-    <div class="left">
-      <div class="box"><img src="https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true" alt=""></div>
-      <div class="box"><img src="https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true" alt=""></div>
-      <div class="box"><img src="https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true" alt=""></div>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <h1>Coffee</h1>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqhArPHKaAXsIuGXrhmInWZ5r09tO2cBSVw&usqp=CAU"
+          alt=""
+          style="width: 70px; border-radius: 40px"
+        />
+      </div>
+      <div class="header-right">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="home">Home</a></li>
+          <li><a href="conteoct">Contact</a></li>
+          <li><a href="a">About</a></li>
+          <li><a href="other">Other</a></li>
+        </ul>
+      </div>
+      <div class="button">button</div>
     </div>
-    <div class="left">
-      <div class="box"><img src="https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true" alt=""></div>
-      <div class="box"><img src="https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true" alt=""></div>
-      <div class="box"><img src="https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true" alt=""></div>
+    <div class="container">
+      <h1>IMAGES</h1>
+      <div class="main">
+        <div class="card">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
+          <div class="text">
+            <a href="country">1 Country</a><br />
+            <a href="country">2 Coffee beans</a><br />
+            <a href="country">3 Trade name</a>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="right-top">
+            <div class="section">
+              <h1>Тренд мэдээ</h1>
+              <div>
+                <h1>1</h1>
+                <p>
+                  Өмгөөлөгч О.Санчирбал: 60 сая төгрөгийн сарнай А.Амундратай
+                  ямар ч хамааралгүй
+                </p>
+              </div>
+              <div>
+                <h1>2</h1>
+                <p>
+                  Украинд учирсан хохирлыг ОХУ-аар нөхөн төлүүлэх НҮБ-ын
+                  тогтоолд Монгол байр сууриа илэрхийллээ
+                </p>
+              </div>
+              <div>
+                <h1>3</h1>
+                <p>
+                  Шигшээ баг Тайландад эцсийн мөчид дөрвөн оноогоор хожигдлоо
+                </p>
+              </div>
+            </div>
+            <div class="second-section">
+              <img
+                src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+                alt=""
+              />
+              <h3>Coffee</h3>
+              <p>
+                Coffee is a drink prepared from roasted coffee beans. Darkly
+                colored, bitter, and slightly acidic, coffee has a stimulating
+                effect on humans, primarily due to its caffeine content. It is
+                the most popular hot drink in the world.[3] Seeds of the Coffea
+                plant's fruits are separated to produce unroasted green coffee
+                beans. The beans are roasted and then ground into fine particles
+                that are typically steeped in hot water before being filtered
+                out, producing a cup of coffee. It is usually served hot,
+                although chilled or iced coffee is common. Coffee can be
+                prepared and presented in a variety of ways (e.g., espresso,
+                French press, caffè latte, or already-brewed canned coffee).
+                Sugar, sugar substitutes, milk, and cream are often used to
+                lessen the bitter taste or enhance the flavor. Though coffee is
+                now.
+              </p>
+            </div>
+          </div>
+          <div class="bottom">
+            <input type="text" placeholder="Select your text" class="input" />
+            <div>
+              <input type="button" value="cancel" />
+              <input type="button" value="submit" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="card">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
+          <div class="text">
+            <a href="country">1 Country</a><br />
+            <a href="country">2 Coffee beans</a><br />
+            <a href="country">3 Trade name</a>
+          </div>
+        </div>
+        <div class="card-right">
+          <div class="right-top">
+            <div class="section">
+              <h1>Тренд мэдээ</h1>
+              <div>
+                <h1>1</h1>
+                <p>
+                  Өмгөөлөгч О.Санчирбал: 60 сая төгрөгийн сарнай А.Амундратай
+                  ямар ч хамааралгүй
+                </p>
+              </div>
+              <div>
+                <h1>2</h1>
+                <p>
+                  Украинд учирсан хохирлыг ОХУ-аар нөхөн төлүүлэх НҮБ-ын
+                  тогтоолд Монгол байр сууриа илэрхийллээ
+                </p>
+              </div>
+              <div>
+                <h1>3</h1>
+                <p>
+                  Шигшээ баг Тайландад эцсийн мөчид дөрвөн оноогоор хожигдлоо
+                </p>
+              </div>
+            </div>
+            <div class="second-section">
+              <img
+                src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+                alt=""
+              />
+              <h3>Coffee</h3>
+              <p>
+                Coffee is a drink prepared from roasted coffee beans. Darkly
+                colored, bitter, and slightly acidic, coffee has a stimulating
+                effect on humans, primarily due to its caffeine content. It is
+                the most popular hot drink in the world.[3] Seeds of the Coffea
+                plant's fruits are separated to produce unroasted green coffee
+                beans. The beans are roasted and then ground into fine particles
+                that are typically steeped in hot water before being filtered
+                out, producing a cup of coffee. It is usually served hot,
+                although chilled or iced coffee is common. Coffee can be
+                prepared and presented in a variety of ways (e.g., espresso,
+                French press, caffè latte, or already-brewed canned coffee).
+                Sugar, sugar substitutes, milk, and cream are often used to
+                lessen the bitter taste or enhance the flavor. Though coffee is
+                now.
+              </p>
+            </div>
+          </div>
+          <div class="bottom">
+            <input type="text" placeholder="Select your text" class="input" />
+            <div>
+              <input type="button" value="cancel" />
+              <input type="button" value="submit" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="body">
-    <div class="ca">
-      <div class="card">
-        <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="">
-      <div class="text">
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam nobis, voluptate quidem, fuga ipsa, ab esse eum </p>
+    <footer>
+      <div class="logo">
+        <h1>Coffee</h1>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqhArPHKaAXsIuGXrhmInWZ5r09tO2cBSVw&usqp=CAU"
+          alt=""
+          style="width: 70px; border-radius: 40px"
+        />
       </div>
+      <div>
+        <a href="">text</a>
+        <a href="">text2</a>
       </div>
-      <div class="card">
-        <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="">
-      <div class="text">
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam nobis, voluptate quidem, fuga ipsa, ab esse eum </p>
+      <div>
+        <a href="">text3</a>
       </div>
-      </div>
-      <div class="card">
-        <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="">
-      <div class="text">
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam nobis, voluptate quidem, fuga ipsa, ab esse eum </p>
-      </div>
-      </div>
-      <div class="card">
-        <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="">
-      <div class="text">
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam nobis, voluptate quidem, fuga ipsa, ab esse eum </p>
-      </div>
-      </div>
-      
-      
-    </div>
-    <div class="foot">
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo soluta distinctio, temporibus alias numquam nihil vitae recusandae quibusdam corrupti! Vel nesciunt laborum consequuntur voluptate minima maiores iste quasi accusamus qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et necessitatibus commodi cupiditate accusantium ipsa, voluptatibus eius veniam, doloribus neque rerum tenetur quam asperiores, molestias cum quaerat ea ducimus vitae expedita!</p>
-    </div>
-  </div>
-</body>
-
+    </footer>
+  </body>
 </html>
