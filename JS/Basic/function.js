@@ -14,6 +14,15 @@ assignment-suulgaj uguh
 constant-togtmol
 undefined-todorhoigvi
 define-todorhoiloh
+! - negation esreg
+nested- dotor dotroo
+assignment operator-suulagaj uguh
+&& - and operator
+|| - or operator
+statement - ilerhiilel
+case - tohioldol
+integer - bvhel too
+float - butarhai too
 */
 
 let a = 15;
