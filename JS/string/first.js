@@ -1,3 +1,9 @@
+/*Math.abs- modul- sorog toog eyreg bolgoh
+Math.ceil- taaz- float toog deeshe tegshleh
+Math.floor- shal
+Math.round- toimloh
+Math.pow- zereg oloh
+*/
 //day-12
 let myStr = "single quotes ' double quotes \" ";
 let babyshark = "baby shark baby shark \nbaby shark";
@@ -35,3 +41,11 @@ lastPart = myString.substring(
 );
 myString = firstPart.concat(lastPart);
 console.log(myString);
+
+//number
+
+let number = 12.234546576;
+let displayNumber = number.toFixed(2);
+console.log(displayNumber);
+
+console.log(Math.ceil(Math.random() * 6));

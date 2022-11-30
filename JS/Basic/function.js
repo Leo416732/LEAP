@@ -30,7 +30,8 @@ double quotes - ""
 length - urt
 backslash - \\
 index - ehlel
-
+default- 
+fixed
 
 property ".length" ene
 method "charAt(0)" ene
