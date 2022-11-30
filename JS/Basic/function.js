@@ -1,3 +1,4 @@
+//day-11
 let name = "leo";
 
 let num1 = "15"; //string
@@ -23,6 +24,16 @@ statement - ilerhiilel
 case - tohioldol
 integer - bvhel too
 float - butarhai too
+template literals - `
+single quotes - ''
+double quotes - ""
+length - urt
+backslash - \\
+index - ehlel
+
+
+property ".length" ene
+method "charAt(0)" ene
 */
 
 let a = 15;
