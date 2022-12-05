@@ -1,4 +1,4 @@
-//day 13
+//day 14
 /*row - mor
 
 */
@@ -14,18 +14,18 @@
 // }
 
 //gurwaljin
-let n = 6;
-let output = "";
-for (let row = 1; row <= n; row++) {
-  for (let col = 1; col <= n; col++) {
-    if (col <= row) {
-      output += "*" + " ";
-    }
-  }
-  output += "\n";
-  debugger;
-}
-console.log(output);
+// let n = 10;
+// let output = "";
+// for (let row = 1; row <= n; row++) {
+//   for (let col = 1; col <= n; col++) {
+//     if (col <= row) {
+//       output += col + " ";
+//     }
+//   }
+//   output += "\t" + "\n";
+//   debugger;
+// }
+// console.log(output);
 
 // 000 number
 let num = "132456789";
@@ -71,3 +71,18 @@ if (prime) {
 } else {
   console.log("Anhnii too bish");
 }
+
+// piramid
+let count = 1;
+let output = "";
+for (let row = 1; row <= 4; row++) {
+  for (let dash = 4 - row; dash > 0; dash--) {
+    output += " ";
+  }
+  for (let num = 1; num <= row; num++) {
+    output += count + " ";
+    count++;
+  }
+  output += "\n";
+}
+console.log(output);
