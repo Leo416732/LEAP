@@ -14,7 +14,8 @@ for (i = 0; i < 16; i++) {
   newDiv.style.height = "100px";
   newDiv.style.border = "1px solid black";
   newDiv.style.backgroundColor = `rgb(${randomR},${randomG},${randomB})`;
-  if (i == randomNum) {
+    if (i == randomNum) {
     newDiv.style.backgroundColor = `rgb(${randomR - 30},${randomG},${randomB})`;
   }
 }
+
