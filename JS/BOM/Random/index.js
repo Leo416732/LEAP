@@ -2,11 +2,12 @@ let rootElement = document.getElementById("root");
 let rootSec = document.getElementById("root");
 rootSec.style.display = "flex";
 rootSec.style.flexWrap = "wrap";
-rootSec.style.width = "450px";
+rootSec.style.width = "440px";
 let randomR = Math.floor(Math.random() * 255 + 1);
 let randomG = Math.floor(Math.random() * 255 + 1);
 let randomB = Math.floor(Math.random() * 255 + 1);
 let randomNum = Math.floor(Math.random() * 16 + 1);
+let colorID;
 for (i = 0; i < 16; i++) {
   let newDiv = document.createElement("div");
   rootElement.appendChild(newDiv);
@@ -14,8 +15,10 @@ for (i = 0; i < 16; i++) {
   newDiv.style.height = "100px";
   newDiv.style.border = "1px solid black";
   newDiv.style.backgroundColor = `rgb(${randomR},${randomG},${randomB})`;
-    if (i == randomNum) {
-    newDiv.style.backgroundColor = `rgb(${randomR - 30},${randomG},${randomB})`;
+  if (i == randomNum) {
+    let cont = (newDiv.style.backgroundColor = `rgb(${
+      randomR - 30
+    },${randomG},${randomB})`);
+    colorID = newDiv.id = "color";
   }
 }
-
