@@ -1,11 +1,12 @@
 // score
 let score = 0;
 let scored = document.getElementById("score");
-scored.innerHTML = `Level: ${score}`;
+scored.innerHTML = `Easy mode:`;
+scored.innerHTML = `Score: ${score}`;
 scored.style.color = "white";
 scored.style.textAlign = "center";
 scored.style.padding = "30px 0";
-
+scored.style.fontSize = "30px";
 //root
 let rootElement = document.getElementById("root");
 let rootSec = document.getElementById("root");
@@ -14,7 +15,7 @@ rootSec.style.display = "flex";
 rootSec.style.margin = "auto";
 rootSec.style.gap = "7px";
 rootSec.style.flexWrap = "wrap";
-rootSec.style.width = "428px";
+rootSec.style.width = "430px";
 rootSec.style.border = "2px solid black";
 rootElement.style.padding = "5px";
 
@@ -53,7 +54,7 @@ function startGame() {
       if (different) {
         score += 1;
         startGame();
-        scored.innerHTML = `Level: ${score}`;
+        scored.innerHTML = `Score: ${score}`;
         if (score > 10 && different) {
           colorChange = newDiv.style.backgroundColor = `rgb(${
             randomR - 20
@@ -65,7 +66,7 @@ function startGame() {
         }
       } else {
         score = 0;
-        scored.innerHTML = `Level: ${score}`;
+        scored.innerHTML = `Score: ${score}`;
       }
     });
   }
