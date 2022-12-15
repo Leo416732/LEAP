@@ -13,6 +13,6 @@ clockElement.style.textAlign = "center";
 clockElement.style.color = "#1c315e";
 // input
 let inputElement = document.getElementById("input");
-
+let i = 0;
 function input() {}
 input();
