@@ -41,7 +41,7 @@ button.addEventListener("click", function () {
   function myClick(some) {
     for (i = 0; i < close.length; i++) {
       close[i].addEventListener("click", function () {
-        crt.style.display = "none";
+        crt[i].style.display = "none";
       });
     }
   }
