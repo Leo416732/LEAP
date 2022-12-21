@@ -1,0 +1,38 @@
+body {
+  background-color: #001f24;
+}
+#score {
+  color: aliceblue;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+}
+.root {
+  display: flex;
+  margin: 0 auto;
+  gap: 7px;
+  flex-wrap: wrap;
+  width: 315px;
+
+  padding: 5px;
+  height: 315px;
+}
+.list {
+  width: 100px;
+  height: 100px;
+}
+.image {
+  width: 315px;
+  height: 300px;
+}
+.resBtn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(156, 31, 31);
+  margin: 0 auto;
+  font-size: 20px;
+}
+.resBtn:hover {
+  background-color: #581c1c;
+}

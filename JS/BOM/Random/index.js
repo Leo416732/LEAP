@@ -1,74 +1,69 @@
-// score
-let score = 0;
-let scored = document.getElementById("score");
-scored.innerHTML = `Easy mode:`;
-scored.innerHTML = `Score: ${score}`;
-scored.style.color = "white";
-scored.style.textAlign = "center";
-scored.style.padding = "30px 0";
-scored.style.fontSize = "30px";
-//root
-let rootElement = document.getElementById("root");
-let rootSec = document.getElementById("root");
-document.querySelector("body").style.backgroundColor = "#001f24";
-rootSec.style.display = "flex";
-rootSec.style.margin = "auto";
-rootSec.style.gap = "7px";
-rootSec.style.flexWrap = "wrap";
-rootSec.style.width = "430px";
-rootSec.style.border = "2px solid black";
-rootElement.style.padding = "5px";
+const root = document.querySelector(".root");
+const score = document.querySelector("#score");
+const reset = document.querySelector(".resBtn");
+const tiles = 9;
+let newScore = 0;
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * max + min);
+}
 
-//start game
+function updateScore(point) {
+  newScore += point;
+  score.innerHTML = newScore;
+}
+
+function rgbGenerator() {
+  const r = randomNumber(0, 255);
+  const g = randomNumber(0, 255);
+  const b = randomNumber(0, 255);
+  return [r, g, b];
+}
+
+function getDifferentColor(colors) {
+  const newColor = [...colors];
+  const random = randomNumber(0, 2);
+  if (newColor[random] > 150) {
+    newColor[random] -= 40;
+  } else {
+    newColor[random] += 50;
+  }
+  return `rgb(${newColor[0]},${newColor[1]},${newColor[2]})`;
+}
 function startGame() {
-  let randomR = Math.floor(Math.random() * 255);
-  let randomG = Math.floor(Math.random() * 255);
-  let randomB = Math.floor(Math.random() * 255);
-  let randomNum = Math.floor(Math.random() * 16);
-  rootElement.innerHTML = "";
-  // for loop
-  for (i = 0; i < 16; i++) {
-    let newDiv = document.createElement("div");
-    rootElement.appendChild(newDiv);
-    newDiv.style.width = "100px";
-    newDiv.style.height = "100px";
-    newDiv.style.border = "1px solid black";
-    let colorChange =
-      (newDiv.style.backgroundColor = `rgb(${randomR},${randomG},${randomB})`);
-    let different = i == randomNum;
+  root.innerHTML = "";
+  const colors = rgbGenerator();
+  const randomIndex = randomNumber(0, 8);
 
-    // different
-    if (different) {
-      if (randomR > 100) {
-        colorChange = newDiv.style.backgroundColor = `rgb(${randomR - 40},${
-          randomG - 40
-        },${randomB - 40})`;
-      } else if (randomR < 100 && randomR > 0) {
-        colorChange = newDiv.style.backgroundColor = `rgb(${randomR + 40},${
-          randomG + 40
-        },${randomB + 40})`;
-      }
+  for (i = 0; i < tiles; i++) {
+    const box = document.createElement("div");
+    box.className = "list";
+    root.appendChild(box);
+    let isDifferent = randomIndex == i;
+    if (isDifferent) {
+      box.style.backgroundColor = getDifferentColor(colors);
+    } else {
+      box.style.backgroundColor = `rgb(${colors[0]},${colors[1]},${colors[2]})`;
     }
-    // click
-    newDiv.addEventListener("click", function () {
-      if (different) {
-        score += 1;
+    box.addEventListener("click", function () {
+      if (isDifferent) {
+        updateScore(1);
         startGame();
-        scored.innerHTML = `Score: ${score}`;
-        if (score > 10 && different) {
-          colorChange = newDiv.style.backgroundColor = `rgb(${
-            randomR - 20
-          },${randomG},${randomB - 20})`;
-          console.log(colorChange);
-        } else if (score > 20 && different) {
-          colorChange =
-            newDiv.style.backgroundColor = `rgb(${randomR},${randomG},${randomB})`;
-        }
       } else {
-        score = 0;
-        scored.innerHTML = `Score: ${score}`;
+        newScore = 0;
+        score.innerHTML = `Max score: ${newScore}`;
+        if (newScore == 0) {
+          root.innerHTML =
+            "<img class='image' src='https://cdn-icons-png.flaticon.com/512/7371/7371972.png'><button class='resBtn'>Reset</button>";
+        }
       }
     });
   }
 }
+
 startGame();
+function res() {
+  reset.addEventListener("click", () => {
+    startGame();
+  });
+}
+res();

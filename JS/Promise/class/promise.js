@@ -2,6 +2,7 @@
 //reject
 //fullfilled
 //resolve -
+// promise - amlalt
 let boldPay = 5_000_000;
 
 let boldAlbum = new Promise((resolve, reject) => {
