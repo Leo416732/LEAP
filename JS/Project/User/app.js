@@ -15,9 +15,9 @@ function Profiles(user) {
     <p class='loc'>Timezone: ${user.location.timezone.offset}</p>
     </div>
     </div>`;
-    rootELement.innerHTML += html 
+  rootELement.innerHTML += html;
 }
 
 fetch("https://randomuser.me/api")
   .then((res) => res.json())
-  .then(data => Profiles(data.results[0]));
+  .then((data) => Profiles(data.results[0]));
