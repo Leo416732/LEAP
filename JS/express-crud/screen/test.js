@@ -3,6 +3,8 @@ let AllCar = document.querySelector("#root");
 let body = document.querySelector("body");
 const toyCars = document.querySelector(".toyota");
 const lexCars = document.querySelector(".lexus");
+const selectCars = document.querySelector(".select");
+const CarsImg = document.querySelector(".carImage");
 
 button.addEventListener("click", () => {
   fetch("http://localhost:3333/api/cars", {
@@ -26,6 +28,13 @@ lexCars.addEventListener("click", () => {
     .then((res) => res.json())
     .then((data) => LexusCars(data));
 });
+
+fetch("http://localhost:3333/api/cars", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => Options(data));
+
 //All car gen
 AllCar.style.display = "flex";
 AllCar.style.flexWrap = "wrap";
@@ -83,3 +92,14 @@ function LexusCars(cars) {
 }
 //npm i
 //npm i cors
+
+function Options(cars) {
+  cars.map((car) => {
+    if (car.brand == car.brand) {
+      const html = `<option id='${car.model}'>${car.model}</option>`;
+      selectCars.innerHTML += html;
+    }
+  });
+}
+
+CarsImg.addEventListener("change", () => {});
