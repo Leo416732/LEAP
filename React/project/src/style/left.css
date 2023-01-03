@@ -1,0 +1,18 @@
+.left-side {
+  background-color: aquamarine;
+  width: 16%;
+  left: 4%;
+  top: 55px;
+  height: 400px;
+  position: fixed;
+}
+@media screen and (max-width: 1400px) and (min-width: 800px) {
+  .left-side {
+    display: flex;
+  }
+}
+@media screen and (max-width: 800px) {
+  .left-side {
+    display: none;
+  }
+}

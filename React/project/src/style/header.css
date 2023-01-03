@@ -1,0 +1,54 @@
+header {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 1px 1px rgb(199, 196, 196);
+}
+header ul {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: rgb(78, 75, 75);
+}
+
+.list {
+  color: #ccc;
+}
+
+form {
+  width: 50%;
+  padding: 16px;
+}
+input {
+  width: 50%;
+}
+img {
+  width: 20px;
+}
+.image {
+  display: none;
+}
+li {
+  padding: 16px;
+}
+li:hover {
+  background-color: #ccc;
+}
+@media screen and (max-width: 2400px) and (min-width: 800px) {
+  header ul {
+    margin-left: 4%;
+  }
+}
+@media screen and (max-width: 800px) {
+  form {
+    display: none;
+  }
+  .image {
+    display: inline;
+  }
+}
