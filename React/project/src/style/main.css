@@ -1,0 +1,24 @@
+.single-res {
+  border-bottom: 1px solid rgb(202, 200, 200);
+  display: flex;
+}
+p {
+  margin: 10px;
+}
+.votes {
+  width: 30%;
+}
+.answer {
+  background-color: rgb(30, 143, 83);
+  color: white;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 0;
+}
+.text {
+  width: 130%;
+}
+.view {
+  color: brown;
+}

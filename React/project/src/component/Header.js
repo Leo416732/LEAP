@@ -6,8 +6,8 @@ export default function Header() {
     <header>
       <div class="conatiner">
         <ul>
-          <li class="image">
-            <a href="">
+          <li class="image" onClick={() => {}}>
+            <a className="a" href="">
               <img
                 src="https://cdn-icons-png.flaticon.com/128/7710/7710488.png"
                 alt=""
@@ -16,15 +16,19 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="">
+            <a className="a" href="">
               <h3>#Logo</h3>
             </a>
           </li>
           <li class="list">
-            <a href="">About</a>
+            <a className="a" href="">
+              About
+            </a>
           </li>
           <li class="list">
-            <a href="">Products</a>
+            <a className="a" href="">
+              Products
+            </a>
           </li>
           <form>
             <input type="text" />

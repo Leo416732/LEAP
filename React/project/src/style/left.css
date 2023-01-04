@@ -1,17 +1,31 @@
 .left-side {
-  background-color: aquamarine;
+  border-right: 1px solid rgb(202, 200, 200);
   width: 16%;
   left: 4%;
   top: 55px;
   height: 400px;
   position: fixed;
 }
-@media screen and (max-width: 1400px) and (min-width: 800px) {
+.public li {
+  padding-top: 16px;
+  list-style-type: none;
+}
+.menu {
+  list-style-type: none;
+  font-size: 14px;
+  margin: 0 auto;
+}
+.menu .list {
+  padding-top: 16px;
+  text-align: left;
+}
+@media screen and (max-width: 1400px) and (min-width: 900px) {
   .left-side {
     display: flex;
   }
 }
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 900px) {
   .left-side {
     display: none;
   }
